@@ -1,37 +1,44 @@
-function persegi (panjang) {
-    var pinggir = "";
-    var antara = "";
-    var tengah = "";
+const persegi = (panjang) => {
+    var sisa = panjang % 2;
 
-    var x = ((panjang - 5) / 2) + 1;
-    var y = (panjang - 1) / 2;
-
+    if (sisa !== 0) {
+        var pinggir = "";
+        var antara = "";
+        var tengah = "";
     
+        var x = ((panjang - 5) / 2) + 1;
+        var y = (panjang - 1) / 2;
+    
+        
+    
+        for (i = 0; i < x; i++) {
+            pinggir += "# ";
+        }
+        for (i = 0; i < y; i++) {
+            antara += "# ";
+        }
+        for (i = 0; i < y; i++) {
+            tengah += "* ";
+        }
+    
+        console.log(`* ${pinggir}* ${pinggir}*`);
+        for (i = 0; i < x; i++) {
+            console.log(antara + "* " + antara);
+        }
+        console.log(tengah + "# " + tengah);
+        for (i = 0; i < x; i++) {
+            console.log(antara + "* " + antara);
+        }
+        console.log(`* ${pinggir}* ${pinggir}*`);
+    } else {
+        console.log("Angka bukan ganjil!");
+    }
 
-    for (i = 0; i < x; i++) {
-        pinggir += "# ";
-    }
-    for (i = 0; i < y; i++) {
-        antara += "# ";
-    }
-    for (i = 0; i < y; i++) {
-        tengah += "* ";
-    }
-
-    console.log(`* ${pinggir}* ${pinggir}*`);
-    for (i = 0; i < x; i++) {
-        console.log(antara + "* " + antara);
-    }
-    console.log(tengah + "# " + tengah);
-    for (i = 0; i < x; i++) {
-        console.log(antara + "* " + antara);
-    }
-    console.log(`* ${pinggir}* ${pinggir}*`);
 
       
 };
 
-persegi(11);
+persegi(5);
 
 //-2 0 1 2 3 4 5
 // 2 3 4 5 6 7 8
