@@ -5,7 +5,7 @@ const sort = (array) => {
     do {
         swapped = false;
         for (let i = 0; i < array.length; i++) {
-            if (array[i] > array[i + 1]) {
+            if (array[i] < array[i + 1]) {
                 let temp = array[i];
                 array[i] = array[i + 1];
                 array[i + 1] = temp;
@@ -18,7 +18,6 @@ const sort = (array) => {
 };
 
 let myArray = [20, 12, 35, 11, 17, 9, 58, 23, 69, 21];
-
 console.log(sort(myArray));
 
 
